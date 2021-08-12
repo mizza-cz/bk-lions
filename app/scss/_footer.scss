@@ -1,0 +1,26 @@
+.footer{
+   position: relative;
+   z-index: 99999;
+   margin-top: -7px;
+   background-color: $red;
+   &__inner{
+      display: flex;
+      justify-content: space-between;
+      padding: 37px 0;
+      align-items: center;
+      width: 100%;
+      .social{
+
+      }
+      p{
+         font-size: 0.875rem;
+         color: #fff;
+         margin-bottom: 0;
+         a{
+            color: #fff;
+         }
+      }
+   }
+  
+
+}
