@@ -1,0 +1,148 @@
+
+/// main zapasy page start -----------------------------
+.zapas__btn{
+   display: flex;
+   .btn{
+      margin: 0 8px;
+   }
+}
+ .zapas-item {
+   display: flex;
+   padding-bottom: 17px;
+   background-color: #fff;
+   .hp-zapasy__links{
+      border: none;
+   }
+   .hp-zapasy__links a{
+      border: 1px solid $dark-red;
+   }
+ }
+ .zapas-item__teams {
+   display: flex;
+   max-width: 120px;
+   width: 100%;
+   justify-content: space-between;
+   margin-right: 16px;
+   img {
+     width: 56px;
+     height: 56px;
+     border-radius: 50%;
+     object-fit: cover;
+     display: block;
+   }
+ }
+ .zapas-item__box {
+   width: 100%;
+   display: flex;
+ }
+ .zapas-item__date {
+   font-size: 0.75rem;
+   line-height: 14.52px;
+   display: block;
+ }
+ .zapas-item__info {
+   padding-top: 2px;
+   .zapas__club {
+     margin-bottom: 8px;
+     padding-top: 2px;
+     font-weight: 700;
+     .pisek {
+       color: $red;
+     }
+   }
+   .zapas__btn {
+     a {
+       font-size: 14px;
+       width: 64px;
+       height: 22px;
+     }
+   }
+ }
+ .zapas-item__num {
+   color: #000;
+   font-size: 48px;
+   line-height: 56px;
+   &.win {
+     color: $green;
+   }
+   &.dh {
+     color: #2c2c2c;
+   }
+   &.losing {
+     color: $red;
+   }
+ }
+ .main-zapasy__inner-btn {
+   background-color: #f2f4f8;
+   padding: 10px 16px;
+   margin-bottom: 15px;
+ 
+   font-size: 16px;
+   line-height: 28px;
+ 
+   font-weight: 700;
+ 
+   a {
+     position: relative;
+     padding: 0;
+     border: none;
+     
+     cursor: pointer;
+     text-decoration: underline;
+     background-color: transparent;
+     &:hover {
+       text-decoration: none;
+     }
+   }
+   a + a {
+     padding-left: 6px;
+     &::before {
+       content: '|';
+       left: 0;
+       position: absolute;
+     }
+   }
+ }
+ .main-zapasy__inner {
+   .zapas-item {
+     margin-bottom: 15px;
+     border-bottom: 1px solid #dde1e6;
+   }
+ }
+ .zapasy-page{
+    h3{
+       margin-bottom: 16px;
+       text-transform: uppercase;
+    }
+ }
+
+ @media(max-width:660px){
+    .zapas-item__teams{
+       display: none;
+    }
+    .zapas-item__num{
+       font-size: 2rem;
+    }
+    .zapas-item__info .zapas__club{
+       font-size: 0;
+
+    }
+    .zapas-item__info .zapas__club span{
+       display: block;
+       font-size: 1rem;
+    }
+    .hp-zapasy__links{
+       margin-left: -8px;
+       margin-right: -8px;
+       padding-top: 8px;
+    }
+    
+    .zapas-item .hp-zapasy__links a{
+      padding: 6px 36px 4px 12px;
+    }
+    .zapas-item{
+      .hp-zapasy__links{
+         justify-content: start;
+      }
+    }
+ }
