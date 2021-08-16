@@ -1,0 +1,53 @@
+.infoblock__wrapper{
+   box-shadow: 0 0 10px 0 rgba(0,0,0, .15);
+   padding: 32px;
+}
+.infoblock__header{
+   text-transform: uppercase;
+   color: $red;
+   position: relative;
+   margin-bottom: 10px;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
+   justify-content: space-between;
+}
+.soupiska-page{
+   &
+   .hp-statistiky__top {
+      margin-top: 0;
+      a{
+         display: flex;
+      }
+   }
+   .form{
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+   }
+}
+.tabulka__tabs{
+   display: flex;
+   margin-bottom: 32px;
+}
+.tabulka__tab:first-of-type{
+   border-bottom-left-radius: 5px;
+   border-top-left-radius: 5px;
+}
+.tabulka__tab:last-of-type, .statistiky__tab:last-of-type{
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
+}
+.tabulka__tab.active{
+   background-color: $red;
+   color: #fff;
+}
+.tabulka__tab{
+   padding: 5px 12px 4px 12px;
+   color: $red;
+   border: 1px solid $red;
+   font-size: 0.75rem;
+   font-weight: 800;
+}
