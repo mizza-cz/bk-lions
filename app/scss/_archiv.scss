@@ -6,19 +6,20 @@
  
  .select__box {
    display: flex;
-   max-width: 550px;
-   justify-content: space-between;
+   max-width: 590px;
+  
    .input {
      width: 100%;
-     border: 2px solid $red;
+     border: 2px solid $dark-red;
      border-radius: 4px;
      padding: 0 15px;
      outline: none;
      font-size: 18px;
      line-height: 32px;
      color: #000;
+     height: 35px;
      &:focus {
-       border: 2px solid $dark-red;
+       border: 2px solid $red;
      }
    }
    .btn {
@@ -30,31 +31,30 @@
  .select__redirect {
    cursor: pointer;
    display: block;
-   background-color: $red;
-   max-width: 250px;
+   background-color: $dark-red;
+   max-width: 177px;
    width: 100%;
    color: #fff;
    margin-bottom: 30px;
    border-radius: 4px;
-   height: 46px;
+   height: 35px;
  }
  .select__redirect + .select__redirect {
    margin-left: 50px;
  }
  .jq-selectbox__select-text {
    width: 100% !important;
-   font-size: 16px;
-   text-transform: uppercase;
-   padding: 11px 15px;
+   font-size: 14px;
+   padding: 7px 32px 7px 25px;
    position: relative;
-   font-weight: 800;
+   font-weight: 400;
    &::before {
      content: '';
      position: absolute;
-     right: 15px;
+     right: 23px;
      width: 10px;
      height: 15px;
-     background-image: url('../images/svg/arrow-filtr.svg');
+     background-image: url('../images/svg/angle-down.svg');
      background-repeat: no-repeat;
      background-size: cover;
      top: 10px;
@@ -69,18 +69,18 @@
    text-align: center;
    width: 100% !important;
    left: 0;
-   top: 46px;
+   top: 36px;
    padding-top: 10px;
    padding-bottom: 10px;
  }
  .jq-select-multiple li,
  .jq-selectbox li {
-   padding: 8px 16px;
+   padding: 6px 16px;
    color: #fff;
    text-transform: initial;
-   font-size: 0.875rem;
+   font-size: 0.75rem;
    width: 100%;
-   font-weight: 700;
+   font-weight: 400;
    text-align: left;
    line-height: 100%;
    &:hover {
@@ -90,13 +90,13 @@
  }
  .btn {
    width: 136px;
-   height: 40px;
+   height: 35px;
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: $red;
+   background-color: $dark-red;
    color: #fff;
-   font-size: 16px;
+   font-size: 0.875rem;
    cursor: pointer;
    border: none;
    border-radius: 4px;

@@ -5,16 +5,16 @@ $(function(){
     $('.nav__link').on('click', function () {
       $(this).closest('.nav__item').toggleClass('active');
     });
-    $('.infoblock__wrapper .tabulka__tab').on('click', function (event) {
-      var id = $(this).attr('data-id');
-      $('.infoblock__wrapper').find('.infoblock__tabulka-content').removeClass('tab-active').hide();
-      $('.infoblock__wrapper .infoblock__header').find('.tabulka__tab').removeClass('active');
-      $(this).addClass('active');
-      $('#' + id)
-        .addClass('tab-active')
-        .fadeIn();
-      return false;
-    });
+    // $('.infoblock__wrapper .tabulka__tab').on('click', function (event) {
+    //   var id = $(this).attr('data-id');
+    //   $('.infoblock__wrapper').find('.infoblock__tabulka-content').removeClass('tab-active').hide();
+    //   $('.infoblock__wrapper .infoblock__header').find('.tabulka__tab').removeClass('active');
+    //   $(this).addClass('active');
+    //   $('#' + id)
+    //     .addClass('tab-active')
+    //     .fadeIn();
+    //   return false;
+    // });
     $('select, .shop__check').styler();
    $('.slider-hrac').slick({
       Infinity:true,

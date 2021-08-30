@@ -1,53 +1,105 @@
-.infoblock__wrapper{
-   box-shadow: 0 0 10px 0 rgba(0,0,0, .15);
-   padding: 32px;
-}
-.infoblock__header{
-   text-transform: uppercase;
-   color: $red;
-   position: relative;
-   margin-bottom: 10px;
-   display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
-   -webkit-box-pack: justify;
-   -ms-flex-pack: justify;
-   justify-content: space-between;
-}
-.soupiska-page{
-   &
-   .hp-statistiky__top {
-      margin-top: 0;
-      a{
-         display: flex;
+
+.soupiska{
+   &__header{
+      display: flex;
+      justify-content: space-between;
+   }
+   &__content{
+      display: flex;
+      margin-left: -8px;
+      margin-right: -8px;
+      flex-wrap: wrap;
+   }
+   &__hrac{
+      max-width: 33.333%;
+      flex: 0 0 33.333%;
+      padding: 0 8px;
+      margin-bottom: 16px;
+      
+   }
+   &__link{
+      position: relative;
+      height: 355px;
+      width: 100%;
+      &:hover{
+         h2,h3{
+            text-decoration: underline;
+         }
       }
    }
-   .form{
-      border-bottom: none;
-      padding-bottom: 0;
-      margin-bottom: 0;
+   &__bio{
+      background:$dark-red;
+      padding-bottom: 24px;
+      padding-top: 24px;
+   }
+   &__info{
+      position: absolute;
+      bottom: 0;
+     
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      span{
+         background:$dark-red;
+         font-size: 1.5rem;
+         line-height: 1.33;
+         font-weight: 800;
+         width: 64px;
+         height: 64px;
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin: 0 auto -32px;
+      }
+      p{
+         margin-bottom: 0;
+         font-size: 12px;
+      }
+      h2{
+         line-height: 1.4;
+         margin-bottom: 5px;
+      }
+
+      h3{
+         line-height: 1.25;
+      }
+      h2,h3{
+         text-transform: uppercase;
+        
+      }
+    
+   }
+   &__img{
+      background: rgba(168, 7, 35, 0.1);
+      height: 100%;
+      img{
+         display: block;
+         height: 100%;
+         width: 100%;
+         object-fit: contain;
+      }
    }
 }
-.tabulka__tabs{
-   display: flex;
-   margin-bottom: 32px;
+
+
+@media(max-width:740px){
+   .soupiska__hrac{
+      max-width: 50%;
+      flex: 0 50%;
+   }
 }
-.tabulka__tab:first-of-type{
-   border-bottom-left-radius: 5px;
-   border-top-left-radius: 5px;
+@media(max-width:640px){
+   .soupiska__header{
+      display: block;
+      .select__redirect{
+         max-width: 177px;
+      }
+   }
 }
-.tabulka__tab:last-of-type, .statistiky__tab:last-of-type{
-   border-top-right-radius: 5px;
-   border-bottom-right-radius: 5px;
-}
-.tabulka__tab.active{
-   background-color: $red;
-   color: #fff;
-}
-.tabulka__tab{
-   padding: 5px 12px 4px 12px;
-   color: $red;
-   border: 1px solid $red;
-   font-size: 0.75rem;
-   font-weight: 800;
+@media(max-width:540px){
+   .soupiska__hrac{
+      max-width: 100%;
+      flex: 100%;
+   }
 }
