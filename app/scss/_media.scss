@@ -226,8 +226,9 @@
    .top__item-box {
       flex-wrap: wrap;
     }
-    .top__item.top__item--left {
-      height: 350px;
+    .top__item.top__item--left,
+    .top__item {
+      height: 300px;
     }
    .top__title.top__title--main{
       font-size: 1.25rem;

@@ -1,0 +1,29 @@
+.zapas-page{
+   margin-top: 0;
+   h2{
+      color: #A80723;
+      margin-bottom: 16px;
+   }
+   .hp-zapasy__item{
+      padding-top: 40px;
+      text-align: center;
+      padding-bottom: 20px;
+      margin-bottom: 32px;
+   }
+   .hp-zapasy__top{
+      top: 0;
+      margin-bottom: 16px;
+   }
+   .hp-zapasy__row{
+      margin-top: 0;
+   }
+   .hp-zapasy__statistic{
+      padding: 0 32px;
+      font-size: 0.875rem;
+      line-height: 1.4;
+      text-align: left;
+      h2{
+         margin-bottom: 8px;
+      }
+   }
+}
