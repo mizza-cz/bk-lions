@@ -110,6 +110,13 @@
    }
  }
  .zapasy-page{
+  .zapas-item__num{
+    text-align: right;
+    width: 45%;
+  }
+  .hp-zapasy__links{
+    justify-content: start;
+  }
     h3{
        margin-bottom: 16px;
        text-transform: uppercase;
