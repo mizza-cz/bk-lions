@@ -8,25 +8,35 @@
       margin-bottom: 10px;
    }
    &__col{ 
-      padding: 0 20px;
+      padding: 0 16px;
+      max-width: 60%;
+      flex: 0 0 60%;
+      h3{
+         margin-left: 16px;
+      }
    }
    &__inner{
       display: flex;
-      width: 100%;
       overflow-x: hidden;
+      margin-left: -16px;
+      margin-right: -16px;
    }
    &__row{
       display: flex;
       width: 100%;
-      max-width: 930px;
+      
+      margin-bottom: 16px;
+      .slick-slide{
+         padding: 0 20px;
+      }
    }
 
    &__item{
       background-color: #fff;
-      max-width: 201px;
+     
       height: 117px;
       width: 100%;
-      padding: 32px;
+      padding: 20px;
       display: block;
       border-radius: 5px;
       &+&{
@@ -40,14 +50,29 @@
          image-rendering: -webkit-optimize-contrast;
       }
    }
+   &__submain{
+      max-width: 20%;
+      flex: 0 0 20%;
+      padding: 0 16px;
+      .partners__item{
+         margin-bottom: 16px;
+         height: 140px;
+         display: block !important;
+      }
+      &-slide{
+        
+      }
+   }
    &__main{
-      flex: 0 0 18%;
-      max-width: 18%;
+      flex: 0 0 20%;
+      max-width: 20%;
+      padding: 0 16px;
       .partners__item{
          max-width: 270px;
          margin: 0;
          margin-right: 24px;
          height: 140px;
+         margin-bottom: 16px;
          
       }
    }
@@ -61,13 +86,13 @@
    }
    &__col{
      display: flex;
-     
+     padding-top: 10px;
      background-color: $yellow;
      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
      transition: all .3s;
-     margin-bottom: 10px;
+     margin: 0 auto 10px;
      border-radius: 5px;
-     padding: 24px;
+     max-width: 1100px;
      align-items: center;
      &:hover{
         box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.40);
@@ -78,44 +103,24 @@
       }
       
    }
-   &__item{
-      
+   a{
+      height: 180px;
+      padding: 24px;
       max-width: 33.333%;
       flex: 0 0 33.333%;
       display: flex;
-      flex-direction: column;
+     
       align-items: center;
       justify-content: center;
-      height: 100%;
-    
       img{
          display: block;
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
          margin-bottom: 16px;
       }
    }
-   &__list{
-      align-items: center;
-      width: 100%;
-      display: flex;
-      text-align: center;
-      padding: 13px 0;
-     
-    
-      li{
-         padding: 16px 8px;
-         max-width: 33.333%;
-         flex: 0 0 33.333%;
-         a{
-            &:hover{
-               text-decoration: underline;
-            }
-         }
-        
-      }
-      // li+li{
-      //    border-top: 1px solid #DCBD00;
-      // }
-   }
+
 }
 
 
@@ -237,19 +242,73 @@
  // hp zapasy
  .hp-zapasy{
     margin-bottom: 24px;
-   
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 32px;
+    margin-bottom: 16px;
+   &__partners{
+      flex: 0 0 15%;
+      max-width: 15%;
+      a{
+      
+         padding: 0 16px;
+         margin-bottom: 16px;
+         display: block;
+         img{
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+         }
+      }
+   }
     &__inner{
        display: flex;
        margin-left: -20px;
        margin-right: -20px;
        justify-content: center;
+       align-items: center;
     }
+    &__item{
+      background-color: $yellow;
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+     border-radius: 5px;
+     padding-bottom: 16px;
+     &-head{
+        display: flex;
+        justify-content: space-between;
+        background-color: $dark-yellow;
+        align-items: center;
+        padding: 16px;
+        p{
+           line-height: 120%;
+           border-radius: 5px 5px 0 0;
+           font-size: 0.875rem;
+         
+           margin-bottom: 0;
+           padding-right: 16px;
+        }
+     }
+     
+      h1{
+         text-align: center;
+         margin: 0 25px;
+         line-height: 100%;
+         margin-top: 20px;
+         span{
+            display: block;
+            font-size: 1rem;
+            line-height: 108%;
+         }
+      }
+   }
     &__links{
        display: flex;
        justify-content: center;
        border-top: 2px solid $dark-yellow;
-       padding: 16px 0 8px;
+       padding: 0 8px;
        flex-wrap: wrap;
+       
        a{
           position: relative;
           display: block;
@@ -261,7 +320,7 @@
           margin: 0 8px;
           border-radius: 5px;
           text-transform: uppercase;
-          margin-bottom: 16px;
+          
           transition: all .3s;
           &:hover{
              color: $red;
@@ -300,7 +359,8 @@
       width: 100%;
       
       padding: 0 20px;
-      max-width: 500px;
+      max-width: 35%;
+      flex: 0 0 35%;
     }
     &__logo{
        background-color: #fff;
@@ -318,7 +378,7 @@
        justify-content: space-evenly;
        align-items: center;
        position: relative;
-       margin-top: -22px;
+       margin-top: -6px;
        margin-bottom: 8px;
        padding: 0 16px;
     }
@@ -345,34 +405,8 @@
        }
     }
  
-    &__item{
-       background-color: $yellow;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
-      border-radius: 5px;
-      padding-bottom: 16px;
-      
-       h1{
-          text-align: center;
-          margin: 0 25px;
-          line-height: 100%;
-          margin-top: 20px;
-          span{
-             display: block;
-             font-size: 1rem;
-             line-height: 108%;
-          }
-       }
-    }
-    p{
-       line-height: 120%;
-       border-radius: 5px 5px 0 0;
-       font-size: 0.875rem;
-       background-color: $dark-yellow;
-       height: 55px;
-       display: flex;
-       align-items: center;
-       justify-content: center;
-    }
+ 
+
  }
  .win{
     color: $green;
@@ -563,6 +597,8 @@
       padding: 24px;
       flex-wrap: wrap;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+      height: 100%;
+      align-items: center;
       &-inner{
          display: flex;
          width: 100%;
@@ -572,6 +608,7 @@
          border: none;
          width: 100%;
          padding: 0;
+         height: 32px;
          a{
             margin: 0;
          }
@@ -615,7 +652,7 @@
          }
          .aside__youtube{
             margin: 0;
-          
+            height: 50%;
          }
          .aside__youtube + .aside__youtube{
             margin-top: 16px;

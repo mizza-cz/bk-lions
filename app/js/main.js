@@ -42,6 +42,41 @@ $(function(){
      
       ]
     });
+    $('.partners__submain-slide').slick({
+      Infinity:true,
+      arrows:false,
+      slidesToShow: 1,
+      autoplay: true,
+      slidesToScroll:1,
+    });
+    $('.partners__row').slick({
+      Infinity:true,
+      arrows:false,
+      slidesToShow: 3,
+      autoplay: true,
+      slidesToScroll:1,
+      responsive: [
+        {
+           breakpoint: 1241,
+           settings: {
+          slidesToShow: 2,
+           }
+         },
+      {
+        breakpoint: 841,
+        settings: {
+       slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 481,
+        settings: {
+       slidesToShow: 2,
+        }
+      },
+    
+     ]
+    });
 });
 var _gallery_loading = false;
 $('a[data-gallery]').click(function () {

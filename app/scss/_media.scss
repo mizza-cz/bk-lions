@@ -15,15 +15,39 @@
 }
 
 @media(max-width:1340px){
-   .partners__item{
-      margin: 0 8px;
+   .hp-zapasy__partners{
+      flex: 0 0 50%;
+      max-width: 50%;
+      order: 1;
+      display: flex;
+      a{
+         width: 100%;
+      }
    }
-   .partners__row{
-      justify-content: inherit;
+   .hp-zapasy__col{
+      flex: 0 0 50%;
+      max-width: 50%;
    }
+   .hp-zapasy__inner{
+      flex-wrap: wrap;
+   }
+ 
+ 
 }
 @media(max-width:1240px){
-   
+   .partners__main,
+   .partners__submain{
+      max-width: 25%;
+      flex: 0 0 25%;
+   }
+   .partners__row .slick-slide{
+      padding: 0 16px;
+   }
+   .partners__col{
+      max-width: 50%;
+      flex: 0 0 50%;
+      
+   }
    .hp-media__col{
       max-width: 30%;
       flex: 0 0 30%;
@@ -54,47 +78,7 @@
       margin-left: -16px;
       margin-right: -16px;
    }
-   .partners__inner{
-      display: block;
-   }
-   .partners__main{
-      margin-bottom: 32px;
-   }
-   .partners__row{
-     display: grid;
-     grid-gap: 16px;
-     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-     max-width: 100%;
-   }
-   .partners__col{
-      flex: 100%;
-      max-width: 100%;
-      margin-left: 0 !important;
-   }
-   .partners__item+.partners__item{
-      margin-left: 0;
-   }
-   .partners__item{
   
-    margin: 0;
-   }
-   .partners__main{
-      max-width: 100%;
-      flex: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      h3{
-         width: 100%;
-         margin-left: 20px;
-      }
-      .partners__item{
-         max-width: 47%;
-         flex: 0 0 47%;
-         height: 240px;
-         margin: 0 auto;
-      }
-     
-   }
    .top-article .top__title{
       max-width: 100% !important;
       margin-bottom: 24px !important;
@@ -102,6 +86,7 @@
    }
 }
 @media(max-width: 1100px){
+
    .hp-zapasy__top{
       justify-content: space-around;
    }
@@ -117,25 +102,32 @@
       justify-content: center;
    }
    .hp-media__col{
-      max-width: 60%;
-      flex: 60%;
+      max-width: 75%;
+      flex: 75%;
    }
    .hp-media__bigcol{
-      max-width: 60%;
-      flex: 0 0 60%;
+      max-width: 75%;
+      flex: 0 0 75%;
       margin-bottom: 32px;
    }
    .hp-media__videos .top__content::after{
-      width: 40px;
-      height: 40px;
+      display: none;
    }
+   
+   .hp-media__videos-inner{
+      flex-direction: column;
+   }
+  
    .hp-media__videos .top__item,
    .hp-media__videos-col{
       margin-bottom: 16px;
       max-width: 100%;
       padding-left: 0;
       flex: 100%;
-      
+   }
+   .hp-media__videos .top__item{
+      height: 240px;
+      min-height: 240px;
    }
    .hp-media__videos-col .aside__youtube-img{
       height: 240px;
@@ -152,7 +144,7 @@
       margin-bottom: 32px;
    }
    .hp-zapasy__inner{
-      display: block;
+     
       margin: 0;
    }
    .hp-zapasy__col{
@@ -207,10 +199,19 @@
     .top__inner {
       flex-wrap: wrap;
     }
-
+  
 }
 @media(max-width:940px){
-   
+   .hp-zapasy{
+      padding: 0 16px;
+   }
+   .hp-zapasy__inner{
+      flex-direction: column;
+   }
+   .hp-zapasy__partners{
+      max-width: 100%;
+      flex: 100%;
+   }
    .zapasy-page .zapas-item__num{
       width: 100%;
       text-align: center;
@@ -238,61 +239,53 @@
    }
   
  
-   .partners__row{
-     display: flex;
-     flex-wrap: wrap;
-     margin-left: -10px;
-   }
-   .partners__item+.partners__item{
-      margin: 0 auto 24px;
-   }
-   .partners__item{
-      margin: 0 auto 24px;
-      max-width: 46%;
-      flex: 0 0 46%;
-      height: 160px;
-   }
+  
    .splide__slider .partners__item.splide__slide{
       max-width: 250px;
    }
 
 }
 @media(max-width:840px){
+   .partners__main .partners__item{
+      max-width: 100%;
+   }
+   .partners__main,
+   .partners__submain{
+      max-width: 50%;
+      flex: 0 0 50%;
+   }
    .hp-zapasy__top{
       padding-top: 16px;
    }
-   .splide__slider .partners__item.splide__slide{
-      max-width: 220px;
-      height: 100px;
+   .partners__inner{
+      flex-wrap: wrap;
+   }
+   .partners__col{
+      max-width: 100%;
+      flex: 100%;
+      padding: 0;
+   }
+   .partners__row{
+    
    }
 }
-@media(max-width:740px){
-   .partners__main .partners__item{
-      height: 200px;
-   }
-   .splide__slider .partners__item.splide__slide{
-      max-width: 190px;
-   }
-}
+
 @media(max-width:640px){
    .hp-zapasy__partners{
       flex-wrap: wrap;
       display: flex;
-      flex-direction: column;
+      
       height: auto !important;
       margin-top: 10px !important;
       margin-bottom: 10px !important;
-      img{
-         object-fit: contain;
-         margin: 0 auto !important;
-         padding: 0 12px;
-         width: 200px;
-         height: 160px;
+      a{
+         max-width: 50%;
+         flex: 0 0 50%;
       }
+      
+     
    }
-   .splide__slider .partners__item.splide__slide{
-      max-width: 155px;
-   }
+ 
    .top-article .top__category{
       padding-left: 16px;
       flex-wrap: wrap;
@@ -327,20 +320,10 @@
       font-size: 1.25rem;
       margin-top: 16px;
    }
-   .partners__row{
-      grid-template-columns: 1fr 1fr;
-   }
-   .partners__main .partners__item{
-      max-width: 100%;
-      height: auto;
-   }
+
 }
 @media(max-width: 600px){
-   .partners__main .partners__item{
-      flex: 100%;
-      margin-bottom: 24px;
-      height: 200px;
-   }
+  
    .splide{
       display: none;
    }
@@ -360,6 +343,23 @@
    }
 }
 @media(max-width:480px){
+   .hp-zapasy__item-head{
+      flex-direction: column;
+      p{
+         margin-bottom: 8px;
+      }
+   }
+   .media__col{
+      flex-direction: column;
+      a{
+         max-width: 100%;
+         flex: 100%;
+         max-height: 200px;
+            img{
+               margin-bottom: 0;
+            }
+      }
+   }
    .hp-media__videos .top__item .top__title{
       font-size: 1rem;
       margin: 10px 0 16px 0;
@@ -385,6 +385,13 @@
    }
    .zapas-page .hp-zapasy__top{
       justify-content: center;
+   }
+}
+@media(max-width:410px){
+   .partners__main,
+   .partners__submain{
+      max-width: 100%;
+      flex: 100%;
    }
 }
 @media(max-width:400px){
