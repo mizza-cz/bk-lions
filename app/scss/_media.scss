@@ -35,17 +35,20 @@
  
 }
 @media(max-width:1240px){
+   .partners__inner{
+      flex-wrap: wrap;
+   }
    .partners__main,
    .partners__submain{
-      max-width: 25%;
-      flex: 0 0 25%;
+      max-width: 270px;
+      flex: 100%;
    }
    .partners__row .slick-slide{
       padding: 0 16px;
    }
    .partners__col{
-      max-width: 50%;
-      flex: 0 0 50%;
+      max-width: 100%;
+      flex: 0 0 100%;
       
    }
    .hp-media__col{

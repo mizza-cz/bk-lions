@@ -52,14 +52,14 @@ $(function(){
     $('.partners__row').slick({
       Infinity:true,
       arrows:false,
-      slidesToShow: 3,
+      slidesToShow: 5,
       autoplay: true,
       slidesToScroll:1,
       responsive: [
         {
            breakpoint: 1241,
            settings: {
-          slidesToShow: 2,
+          slidesToShow: 5,
            }
          },
       {
