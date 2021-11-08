@@ -17,28 +17,40 @@ $(function(){
     // });
     $('select, .shop__check').styler();
    $('.slider-hrac').slick({
+     dots: false,
       Infinity:true,
       arrows:false,
-      slidesToShow: 5,
-      autoplay: true,
-      slidesToScroll:1,
-      centerMode:true,
-      variableWidth:true,
+      slidesToShow: 9,
+      draggable: true,
+      swipeToSlide: true,
+      // slidesToScroll:1,
+      // centerMode:true,
+      // variableWidth:true,
       responsive: [
          {
-            breakpoint: 1640,
+            breakpoint: 1200,
             settings: {
-           slidesToShow: 4,
+           slidesToShow: 7,
             }
           },
-       {
-         breakpoint: 480,
-         settings: {
-        slidesToShow: 1,
-        centerMode:false,
-        variableWidth: false,
-         }
-       },
+          {
+            breakpoint: 991,
+            settings: {
+           slidesToShow: 5,
+            }
+          },
+          {
+            breakpoint: 750,
+            settings: {
+           slidesToShow: 3,
+            }
+          },
+          {
+            breakpoint: 570,
+            settings: {
+           slidesToShow: 1,
+            }
+          },
      
       ]
     });
