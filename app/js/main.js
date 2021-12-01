@@ -5,6 +5,15 @@ $(function(){
     $('.nav__link').on('click', function () {
       $(this).closest('.nav__item').toggleClass('active');
     });
+    $('.popup-youtube, .popup-vimeo, .popup-gmaps, .aside__youtube').magnificPopup({
+      disableOn: 700,
+      type: 'iframe',
+      mainClass: 'mfp-fade',
+      removalDelay: 160,
+      preloader: false,
+  
+      fixedContentPos: false
+    });
     // $('.infoblock__wrapper .tabulka__tab').on('click', function (event) {
     //   var id = $(this).attr('data-id');
     //   $('.infoblock__wrapper').find('.infoblock__tabulka-content').removeClass('tab-active').hide();
@@ -23,9 +32,6 @@ $(function(){
       slidesToShow: 9,
       draggable: true,
       swipeToSlide: true,
-      // slidesToScroll:1,
-      // centerMode:true,
-      // variableWidth:true,
       responsive: [
          {
             breakpoint: 1200,
@@ -124,3 +130,51 @@ $('a[data-gallery]').click(function () {
 
   return false;
 });
+
+
+
+
+
+//// 
+
+
+
+var _gallery_loading = false;
+$('a[data-gallery]').click(function () {
+ if (_gallery_loading) return;
+ _gallery_loading = true;
+
+ var mode = $(this).data('gallery');
+ var url = '/inc/gallery-ajax.php?mode=' + mode;
+
+ if (mode == 1 || mode == 2) {
+   url += '&id=' + $(this).data('gallery-id');
+ }
+
+ $.getJSON(url, { format: 'json' })
+   .done(function (e) {
+     $(this).lightGallery({
+       hash: false,
+       share: false,
+       dynamic: true,
+       dynamicEl: e,
+       download: false,
+       backdropDuration: 500,
+     });
+   })
+   .fail(function () {
+    alert('Nastala chyba při načítání galerie. Prosím zkuste to znovu.');
+   })
+   .always(function () {
+     _gallery_loading = false;
+   });
+
+ return false;
+});
+//// scroll
+window.addEventListener('scroll', function () {
+ var header = document.querySelector('.header');
+ header.classList.toggle('sticky', window.scrollY > 0);
+});
+
+

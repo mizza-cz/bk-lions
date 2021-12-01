@@ -70,7 +70,7 @@
 .slider-hrac {
   z-index: 10;
   .slick-list {
-    padding-top: 50px !important;
+    padding-top: 16px !important;
   }
   &__info {
     display: none;
@@ -109,6 +109,8 @@
   }
   &__item {
     position: relative;
+    display: flex !important;
+    justify-content: center;
     img {
       max-width: none;
       height: 422px;
