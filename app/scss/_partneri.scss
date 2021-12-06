@@ -1,16 +1,48 @@
 .partneri-page {
+  &__wrapper {
+    display: flex;
+    margin-bottom: 32px;
+    h2 {
+      text-align: left;
+      padding: 0 16px;
+    }
+    .partneri-page__item {
+      height: 120px;
+      a {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
   h2 {
     margin-bottom: 16px;
   }
   &__row {
     display: flex;
-    justify-content: center;
     margin-left: -16px;
     margin-right: -16px;
     align-items: center;
     flex-wrap: wrap;
+    &--main {
+      max-width: 70%;
+      flex: 0 0 70%;
+      display: flex;
+      flex-wrap: wrap;
+      .partneri-page__item {
+        max-width: 33.333%;
+        flex: 0 0 33.333%;
+      }
+      h2 {
+        width: 100%;
+      }
+    }
     &--general {
-      flex-direction: column;
+      max-width: 30%;
+      flex: 0 0 30%;
+      .partneri-page__item {
+        max-width: 100%;
+        flex-direction: 100%;
+      }
     }
   }
   &__item {
@@ -18,9 +50,12 @@
     max-width: 25%;
     padding: 0 16px;
     margin-bottom: 32px;
+    height: 100px;
     a {
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05%);
       padding: 16px;
+      width: 100%;
+      height: 100%;
       img {
         object-fit: contain;
         width: 100%;
@@ -30,6 +65,39 @@
     }
   }
 }
+@media (max-width: 840px) {
+  .partneri-page__row--main {
+    max-width: 66.666%;
+    flex: 0 0 66.666%;
+  }
+  .partneri-page__row--general {
+    max-width: 33.333%;
+    flex: 0 0 33.333%;
+  }
+}
+@media (max-width: 770px) {
+  .partneri-page {
+    h2 {
+      text-align: center !important;
+    }
+  }
+  .partneri-page__row--main,
+  .partneri-page__row--general {
+    max-width: 100%;
+    flex: 100%;
+  }
+  .partneri-page__row--general {
+    margin-bottom: 32px;
+    .partneri-page__item {
+      margin: 0 auto 32px;
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  .partneri-page__wrapper {
+    flex-wrap: wrap;
+  }
+}
 @media (max-width: 640px) {
   .partneri-page__item {
     flex: 0 0 33.333%;
@@ -37,8 +105,22 @@
   }
 }
 @media (max-width: 480px) {
+  .partneri-page__row--main .partneri-page__item {
+    flex: 0 0 50%;
+    max-width: 50%;
+    height: 100px;
+  }
+  .partneri-page__row--general {
+    .partneri-page__item {
+      flex: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
   .partneri-page__item {
     flex: 0 0 50%;
     max-width: 50%;
+    height: 80px;
+    margin-bottom: 16px;
   }
 }
