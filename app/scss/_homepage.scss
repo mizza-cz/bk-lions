@@ -361,6 +361,8 @@ a.top__item {
     background-color: #fff;
     padding: 16px 20px;
     border-radius: 5px;
+    width: fit-content;
+    margin: 0 auto 8px;
     img {
       width: 60px;
       height: 60px;
@@ -370,33 +372,51 @@ a.top__item {
   }
   &__top {
     display: flex;
-    justify-content: space-evenly;
+    // justify-content: space-evenly;
     align-items: center;
     position: relative;
     margin-top: -6px;
     margin-bottom: 8px;
     padding: 0 16px;
   }
-  &__row {
-    display: flex;
-    justify-content: space-between;
-    //  margin-top: -9px;
-    color: $dark-red;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-
-    h3 {
-      width: 200px;
-      text-align: center;
-      padding: 0 16px;
-      line-height: 20px;
+  &__midle {
+    max-width: 33.333%;
+    flex: 0 0 33.333%;
+    text-align: center;
+    h1 {
+      margin-bottom: 24px;
     }
     h2 {
       margin: 0 32px;
       margin-top: 4px;
       line-height: 24px;
+      color: $dark-red;
+      text-transform: uppercase;
+      text-align: center;
     }
   }
+  &__team {
+    max-width: 33.333%;
+    flex: 0 0 33.333%;
+    color: $dark-red;
+    text-transform: uppercase;
+    h3 {
+      text-align: center;
+      padding: 0 16px;
+      line-height: 20px;
+    }
+  }
+  &__row {
+    // display: flex;
+    // justify-content: space-between;
+    // //  margin-top: -9px;
+    // color: $dark-red;
+    // text-transform: uppercase;
+    // margin-bottom: 16px;
+  }
+}
+.vs {
+  display: none;
 }
 .win {
   color: $green;

@@ -7,11 +7,11 @@
   background-color: $red;
   &.sticky {
     .mobil-wrap {
-      top: 46px;
+      top: 60px;
     }
     .header__logo {
       width: 96px;
-      height: 70px;
+      height: 86px;
       img {
         width: 50px;
         height: auto;
@@ -21,7 +21,7 @@
       height: 46px;
     }
     .nav__link {
-      font-size: 0.675rem;
+      font-size: 0.75rem;
     }
     .social a {
       height: 24px;

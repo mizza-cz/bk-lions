@@ -23,11 +23,16 @@
     margin-right: -16px;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
     &--main {
       max-width: 70%;
       flex: 0 0 70%;
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
+      h2 {
+        text-align: center;
+      }
       .partneri-page__item {
         max-width: 33.333%;
         flex: 0 0 33.333%;
@@ -114,7 +119,7 @@
     .partneri-page__item {
       flex: 100%;
       max-width: 100%;
-      height: auto;
+      height: 100px;
     }
   }
   .partneri-page__item {

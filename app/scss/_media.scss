@@ -220,12 +220,12 @@
     flex: 100%;
   }
   .zapasy-page .zapas-item__num {
-    width: 100%;
+    width: auto;
     text-align: center;
   }
   .zapasy-page {
     .zapas-item {
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
       h2 {
         margin-left: auto;
         margin-right: auto;
@@ -276,6 +276,10 @@
 }
 
 @media (max-width: 640px) {
+  .zapas-page .hp-zapasy__top {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   .hp-zapasy__partners {
     flex-wrap: wrap;
     display: flex;
@@ -344,6 +348,32 @@
   }
 }
 @media (max-width: 480px) {
+  .hp-zapasy__team {
+    max-width: 100%;
+    flex: 100%;
+  }
+  .vs {
+    display: block;
+    font-weight: 800;
+    color: $red;
+  }
+  .zapas-page .hp-zapasy__top {
+    padding-top: 0;
+    .vs {
+      margin-top: 16px;
+    }
+  }
+  .hp-zapasy__midle {
+    order: -1;
+    max-width: 100%;
+    flex: 100%;
+    h2 {
+      display: none;
+    }
+  }
+  .hp-zapasy__top {
+    flex-direction: column;
+  }
   .hp-zapasy__item-head {
     flex-direction: column;
     p {
