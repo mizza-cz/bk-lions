@@ -373,7 +373,7 @@ a.top__item {
   &__top {
     display: flex;
     // justify-content: space-evenly;
-    align-items: center;
+    // align-items: center;
     position: relative;
     margin-top: -6px;
     margin-bottom: 8px;
@@ -383,12 +383,14 @@ a.top__item {
     max-width: 33.333%;
     flex: 0 0 33.333%;
     text-align: center;
+    padding-top: 24px;
     h1 {
-      margin-bottom: 24px;
+      margin-left: 0;
+      margin-right: 0;
     }
     h2 {
       margin: 0 32px;
-      margin-top: 4px;
+      margin-top: 24px;
       line-height: 24px;
       color: $dark-red;
       text-transform: uppercase;

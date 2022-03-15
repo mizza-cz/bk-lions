@@ -356,6 +356,7 @@
     display: block;
     font-weight: 800;
     color: $red;
+    text-align: center;
   }
   .zapas-page .hp-zapasy__top {
     padding-top: 0;
@@ -367,6 +368,10 @@
     order: -1;
     max-width: 100%;
     flex: 100%;
+    padding-top: 0;
+    margin-bottom: 16px;
+    h1 {
+    }
     h2 {
       display: none;
     }
