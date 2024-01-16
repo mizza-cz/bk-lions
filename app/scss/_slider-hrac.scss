@@ -28,25 +28,7 @@
 //          background: (#690013);
 
 //       }
-//       span{
-//          z-index: 5;
-//          position: absolute;
-//          font-size: 8.125rem;
-//          line-height: 70px;
-//          font-weight: 800;
-//          color: #A80723;
-//          opacity: .3;
-//          right: 0;
-//          left: 0;
-//          margin: 0 auto;
-//          text-align: center;
-//          bottom: 32px;
-//       }
-//       a{
-//          height: 100%;
-//          display: block;
-//       }
-//    }
+
 //    &__info{
 //       position: absolute;
 //       z-index: 5;
@@ -81,6 +63,7 @@
     bottom: 16px;
     right: -15%;
     padding: 5px 10px;
+    transition: all 0.2s;
     &-name {
       display: inline-block;
       font-size: 28px;
@@ -116,6 +99,7 @@
       height: 422px;
       object-fit: cover;
       margin: 0 auto;
+      transition: all 0.2s;
     }
     &:hover {
       cursor: grab;
@@ -131,6 +115,20 @@
         transform: scale(1.1);
       }
     }
+  }
+  span {
+    z-index: 5;
+    position: absolute;
+    font-size: 8.125rem;
+    line-height: 70px;
+    font-weight: 800;
+    color: #a80723;
+    opacity: 0.3;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+    bottom: 32px;
   }
 }
 
